@@ -56,9 +56,11 @@ public class AddForceWander : PhysicsBase {
 	{
 		bool pointWithin = false;       // is the point within the collider?
 		Vector3 target = Vector3.zero;  // the new point
+		int safety = 0;
 
 		// loop until new point is within defined area
 		while (!pointWithin) {
+			if (++safety > 100) break;
 			// create target 
 			target = new Vector3 (
 				Random.Range (transform.position.x - pointSelectRange, transform.position.x + pointSelectRange),
