@@ -1,7 +1,7 @@
 
 
 
-# Sample Unity Movement
+# dig250-unity-movement
 
 A sample Unity (2020.1.2f1) project that shows
 
