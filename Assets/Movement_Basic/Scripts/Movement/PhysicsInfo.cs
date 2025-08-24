@@ -26,8 +26,8 @@ public class PhysicsInfo : MonoBehaviour {
 		// - Velocity is also affected by forces acting against it
 		// - ^ For example, the drag value (a.k.a. "air resistance") will slow the effect of the force
 		// - ^ More drag means more resistance (feather = 20, stone = 1)
-		velocity = rb.velocity;
-		speed = rb.velocity.magnitude;
+		velocity = rb.linearVelocity;
+		speed = rb.linearVelocity.magnitude;
 
 		// Angular speed
 		// - Represents maximum turning speed in (deg/s)

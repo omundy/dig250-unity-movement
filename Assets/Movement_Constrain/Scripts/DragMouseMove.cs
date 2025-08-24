@@ -25,14 +25,14 @@ public class DragMouseMove : MonoBehaviour {
 			// create a normalized direction vector 
 			direction = (mousePosition - transform.position).normalized;
 			// set velocity
-			rb.velocity = new Vector2 (direction.x * moveSpeed, direction.y * moveSpeed);
+			rb.linearVelocity = new Vector2 (direction.x * moveSpeed, direction.y * moveSpeed);
 		} else if (target != null) {
 			// create a normalized direction vector 
 			direction = (target.position - transform.position).normalized;
 			// set velocity
-			rb.velocity = new Vector2 (direction.x * moveSpeed, direction.y * moveSpeed);
+			rb.linearVelocity = new Vector2 (direction.x * moveSpeed, direction.y * moveSpeed);
 		} else {
-			rb.velocity = Vector2.zero;
+			rb.linearVelocity = Vector2.zero;
 		}
 	}
 }
